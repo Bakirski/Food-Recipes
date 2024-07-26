@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Recipes</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+  <h1 class="site-title">🥘Food Recipes🌮</h1>
+  <form method="post" class="site-form">
+    <input class="input-field" type="text" placeholder="Search a recipe" name="recipeName">
+    <input class="search-button" type="submit" value="Search" formaction="/get-recipe">
+  </form>
+  <div class="separator"></div>
+  <div>
+    <div class="title-image-container">
+      <% let recipeImage = data.meals[0].strMealThumb + "/preview"; %>
+      <img class="recipe-image" src=<%=recipeImage%> alt="">
+      <form method="post" action="randomRecipe.ejs" class="inline">
+        <input type="hidden">
+        <button type="submit" name="recipeName" value=<%= data.meals[0].strMeal %> class="link-button" formaction="/randomRecipe">
+          <%= data.meals[0].strMeal %>
+        </button>
+      </form>
+    </div>
+    <div>
+
+    </div>
+  </div>
+
+
+</body>
+
+</html>

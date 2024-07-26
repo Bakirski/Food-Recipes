@@ -1,0 +1,132 @@
+
+body{
+    background-color: #ECCEAE;
+    color: #131842;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+    
+}
+
+form{
+    margin-left: 1%;
+}
+
+.site-title{
+    text-align: center;
+    font-size: 50px;
+}
+
+.recipe-text{
+    width: 40%;
+}
+
+.recipe-container{
+    margin-left: 1%;
+    margin-top: 15px;   
+}
+
+.title-image-container{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    align-items: center;
+}
+
+.recipe-image{
+    border-radius: 10px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.back-button{
+    height: 40px;
+    width: 80px;
+    background-color: #E68369;
+    color: #131842;
+    border: none;
+    border-radius: 4px;
+}
+
+.back-button:hover{
+    opacity: 0.8;
+}
+.back-button:active{
+    opacity:0.6;
+}
+
+.site-form{ 
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+
+.input-field{
+    background-color: #FBF6E2;
+    border: none;
+    border-radius: 2px;
+    width: 200px;
+    height: 20px;
+}
+.search-button{
+    height: 22px;
+    width: 80px;
+    color: #131842;
+    background-color: #FBF6E2;
+    border: none;
+    border-radius: 2px;
+}
+.search-button:hover{
+    opacity: 0.8;
+}
+.search-button:active{
+    opacity: 0.6;
+}
+
+::placeholder{
+    color: #131842;
+    opacity: 1;
+}
+
+.separator{
+    border: 1px solid #131842;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.random-meal-title{
+    text-decoration: none;
+    color: #131842;
+}
+
+.random-meal-title:hover{
+    opacity: 0.8;
+}
+.random-meal-title:active{
+    opacity: 0.6;
+}
+.inline {
+    display: inline;
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: #131842;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: serif;
+}
+
+.link-button:focus {
+    outline: none;
+}
+
+.link-button:active {
+    color: red;
+}
+
+.youtube-link{
+    text-decoration: none;
+    color: #131842;
+}

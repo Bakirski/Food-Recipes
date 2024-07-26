@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Recipes</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <h1 class="site-title">🥘Food Recipes🌮</h1>
+  <% if(locals.content){ %>
+  <div class="recipe-container">
+    <div class="title-image-container">
+      <% let recipeImage = content.meals[0].strMealThumb + "/preview"; %>
+      <img class="recipe-image" src=<%=recipeImage%> alt="">
+      <h2><%= content.meals[0].strMeal %></h2>
+    </div>
+    <div>
+      <%console.log(Object.keys(content.meals[0])); %>
+
+      <% for(let i = 1; i <= 20; i++) {  %>
+
+      <% let txtNum = i.toString(); %>
+      <% let measure = "strMeasure" + i; %>
+      <% let ingredient = "strIngredient" + i; %>
+      <% let mealMeasures = content.meals[0][measure]; %>
+      <% let mealIngredients = content.meals[0][ingredient]; %>
+      <% if(mealMeasures && mealIngredients) { %>
+      <ul style="list-style-type: none; border-left: 3px solid #131842;">
+        <li><%= mealMeasures %> of <%= mealIngredients %></li>
+      </ul>
+      <% } %>
+      <% } %>
+
+    </div>
+    <div>
+      <p class="recipe-text"><%= content.meals[0].strInstructions %></p>
+    </div>
+    <div>
+      <% let ytLink = content.meals[0].strYoutube %>
+      <p><a class="youtube-link" href=<%= ytLink %>>How To Make It (Link)</a></p>
+    </div>
+    <form action="/" method="get">
+      <input class="back-button" type="submit" value="Back" formaction="/back">
+    </form>
+  </div>
+  <% } %>
+  <% if(locals.error){ %>
+  <div>
+    <h3><%= error %></h3>
+  </div>
+  <% } %>
+</body>
+
+</html>
