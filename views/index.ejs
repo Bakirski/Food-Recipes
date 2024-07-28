@@ -22,7 +22,7 @@
       <img class="recipe-image" src=<%=recipeImage%> alt="">
       <form method="post" action="randomRecipe.ejs" class="inline">
         <input type="hidden">
-        <button type="submit" name="recipeName" value=<%= data.meals[0].strMeal %> class="link-button" formaction="/randomRecipe">
+        <button type="text" name="recipeName" value=<%= data.meals[0].strMeal %> class="link-button" formaction="/get-recipe">
           <%= data.meals[0].strMeal %>
         </button>
       </form>

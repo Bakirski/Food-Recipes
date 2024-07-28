@@ -20,21 +20,6 @@ app.get("/", async (req, res) => {
   }
 });
 
-app.post("/randomRecipe", async (req, res) => {
-  const name = req.body.recipeName;
-  console.log(name);
-  try {
-    const result = await axios.get(
-      "https://www.themealdb.com/api/json/v1/1/search.php?s=" + name
-    );
-    const content = result.data;
-    console.log(content);
-    res.render("randomRecipe.ejs", content);
-  } catch (error) {
-    console.log("Error: " + error.message);
-  }
-});
-
 app.post("/get-recipe", async (req, res) => {
   const name = req.body.recipeName;
   try {
